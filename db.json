@@ -83,6 +83,20 @@
       "description": "Venmo, Pay Roommate for Rent",
       "category": "Housing",
       "amount": -975
+    },
+    {
+      "date": "2022-10-03",
+      "description": "Uber",
+      "category": "Transport",
+      "amount": "-500",
+      "id": 13
+    },
+    {
+      "date": "2022-10-03",
+      "description": "Netflix",
+      "category": "Entertainment",
+      "amount": "1000",
+      "id": 14
     }
   ]
 }
