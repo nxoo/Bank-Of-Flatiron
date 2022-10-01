@@ -83,6 +83,20 @@
       "category": "Entertainment",
       "amount": "-1000",
       "id": 14
+    },
+    {
+      "date": "2022-10-04",
+      "description": "Spotify",
+      "category": "Music",
+      "amount": "-300",
+      "id": 15
+    },
+    {
+      "date": "2022-10-05",
+      "description": "KPLC",
+      "category": "Energy",
+      "amount": "-650",
+      "id": 16
     }
   ]
 }

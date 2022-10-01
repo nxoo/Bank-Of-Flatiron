@@ -3,27 +3,28 @@ import TransactionsList from "./TransactionsList";
 import Search from "./Search";
 import AddTransactionForm from "./AddTransactionForm";
 
-let url = 'http://localhost:8001/transactions'
 
 function AccountContainer() {
     const [transactions, setTransactions] = useState([])
+    let url = 'http://localhost:8001/transactions'
+
+    function getTransactions(x) {
+        // x = url
+        fetch(x)
+            .then((res) => res.json())
+            .then(data => setTransactions(data))
+    }
 
     function handleSearch(e) {
         if (e) {
-            fetch(url + '?q=' + e)
-                .then((res) => res.json())
-                .then(data => setTransactions(data))
+            getTransactions(url + '?q=' + e)
         } else {
-            fetch(url)
-                .then((res) => res.json())
-                .then(data => setTransactions(data))
+            getTransactions(url)
         }
     }
 
     useEffect(() => {
-        fetch(url)
-            .then((res) => res.json())
-            .then(data => setTransactions(data))
+        getTransactions(url)
     }, [])
 
     return (
