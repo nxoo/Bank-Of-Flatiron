@@ -1,14 +1,7 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 
-function Transaction() {
-    const [transactions, setTransactions] = useState([])
-    useEffect(() => {
-        fetch('http://localhost:8001/transactions')
-            .then((res) => res.json())
-            .then((data) => setTransactions(data));
-    }, [])
-    console.log('tt', transactions)
-    if (transactions.length === 0) return null
+function Transaction({transactions}) {
+
     return (
         transactions.map(transaction => {
             return (
